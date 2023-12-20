@@ -1,35 +1,35 @@
-const hourE1 = document.getElementById("hours");
-const minuteE1 = document.getElementById("minutes");
-const secondE1 = document.getElementById("seconds");
-const ampmE1 = document.getElementById("ampm");
 
 
-function updateClock(){
-let h= new Date().getHours();
-let m= new Date().getMinutes();
-let s= new Date().getSeconds();
-let ampm = "AM";
-
-if (h>12){
-    h=h-12;
-    ampm = "PM";
-}
-
-h=h<10 ? "0"+ h : h;
-m=m<10 ? "0"+ m : m;
-s=s<10 ? "0"+ s : s;
-
-hourE1.innerText = h;
-minuteE1.innerText = m;
-secondE1.innerText = s;
-ampmE1.innerText = ampm;
-
-setTimeout(()=>{
-    updateClock()}
-    ,1000)
-
-}
+// const vowels = (str)=>{
+//     const vowels= 'aeiouAEIOU';
+//     let count=0
+//     for(const char of str){
+//         if(vowels.includes(char)){
+//             count++
+//         }
+//     }
+//     return count;
+    
+// }
+// console.log(vowels("kishasn"))
 
 
-updateClock()
 
+// const checkReverse = (str) => {
+//    let rev=str.toString()
+//    let ch="";
+//    for(let i of rev){
+//     ch=i+ch
+//    }
+   
+//    console.log(ch)
+
+// }
+
+// checkReverse("abc")
+
+
+let arr = ["mumbai","apple","nanana"]
+arr.forEach((val)=>{
+    console.log(val)
+})

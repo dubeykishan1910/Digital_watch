@@ -2,17 +2,7 @@
 <html>
 <head>
   <title>Display Data in HTML Table using Map</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 10px;
-      text-align: left;
-    }
-  </style>
+ <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -29,29 +19,7 @@
   </tbody>
 </table>
 
-<script>
-  // Function to fetch data from the JSON file and display it in a table using map
-  async function fetchDataAndDisplayTable() {
-    try {
-      const response = await fetch('data.json');
-      const data = await response.json();
 
-      const tableBody = document.getElementById('tableBody');
-      tableBody.innerHTML = data.map(item => `
-        <tr>
-          <td>${item.name}</td>
-          <td>${item.age}</td>
-          <td>${item.email}</td>
-        </tr>
-      `).join('');
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  }
-
-  // Call the fetchDataAndDisplayTable function to display the data in a table
-  fetchDataAndDisplayTable();
-</script>
-
+<script src="index.js"></script>
 </body>
 </html>
